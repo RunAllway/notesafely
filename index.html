@@ -126,7 +126,7 @@
 			return;
 		}
 		var encrypted =CryptoJS.AES.encrypt(originalText,mainPassWordValue); //使用主密码+ 秘钥对随机生产的密码进行加密
-		document.getElementById("encryptedPassWord").value = "https://www.notesafely.cn?data=" +  encodeURIComponent(encrypted);
+		document.getElementById("encryptedPassWord").value = "https://www.notesafely.cn/?data=" +  encodeURIComponent(encrypted);
 		//document.getElementById("mainPassWord").value = '';
 		document.getElementById("encryptedText").value = encrypted;
 		setLocalStorageWithExpiration("mainPassWord",mainPassWordValue,24);
